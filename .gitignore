@@ -1,0 +1,19 @@
+tmp/
+
+.idea
+note.txt
+notes.txt
+# Dockerfile
+air
+pmgo.yml
+
+# Environment Var
+.env*
+
+notes.txt
+note.txt
+
+.vscode
+entt
+
+note.txt
