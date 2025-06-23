@@ -39,26 +39,26 @@ func NewCustomLogger() *CustomLogger {
 }
 
 func (cl *CustomLogger) Info(args ...interface{}) {
-	fmt.Println("\n")
+	fmt.Println()
 	cl.info.Println(args...)
 
 }
 
 func (cl *CustomLogger) Warn(args ...interface{}) {
-	fmt.Println("\n")
+	fmt.Println()
 	cl.warn.Println(args...)
 
 }
 
 func (cl *CustomLogger) Debug(args ...interface{}) {
-	fmt.Println("\n")
+	fmt.Println()
 	cl.debug.Println(args...)
 
 }
 
 func (cl *CustomLogger) Error(args ...interface{}) {
 
-	fmt.Println("\n")
+	fmt.Println()
 	cl.error.Println(args...)
 
 	tags, err := getTags(args...)
@@ -74,7 +74,7 @@ func (cl *CustomLogger) Error(args ...interface{}) {
 func (cl *CustomLogger) Panic(args ...interface{}) {
 
 	// Log the panic
-	fmt.Println("\n")
+	fmt.Println()
 	cl.panic.Println(args...)
 	tags, err := getTags(args...)
 
@@ -86,7 +86,7 @@ func (cl *CustomLogger) Panic(args ...interface{}) {
 	}
 
 	// Now panic with the original arguments
-	fmt.Println("\n")
+	fmt.Println()
 	cl.panic.Panicln(args...)
 
 }
